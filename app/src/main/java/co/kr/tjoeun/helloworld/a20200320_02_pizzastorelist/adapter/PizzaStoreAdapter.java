@@ -5,10 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -36,9 +39,15 @@ public class PizzaStoreAdapter extends ArrayAdapter<PizzaStore> {
         View row = convertView;
 
         if (row == null) {
-            inf.inflate(R.layout.pizza_store_list_item, null);
+            row = inf.inflate(R.layout.pizza_store_list_item, null);
         }
         PizzaStore data = mList.get(position);
+        ImageView logoImg = row.findViewById(R.id.logoImg);
+        TextView nameTxt = row.findViewById(R.id.NameTxt);
+
+        nameTxt.setText(data.getStoreName());
+
+        Glide.with(mContext).load(data.getLogoUrl()).into(logoImg);
 
         return row;
     }
