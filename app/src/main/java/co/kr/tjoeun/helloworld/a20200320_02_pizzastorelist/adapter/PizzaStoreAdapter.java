@@ -27,7 +27,7 @@ public class PizzaStoreAdapter extends ArrayAdapter<PizzaStore> {
 
         mContext = context;
         mList = objects;
-        inf =LayoutInflater.from(mContext)
+        inf =LayoutInflater.from(mContext);
     }
 
     @NonNull
@@ -36,10 +36,9 @@ public class PizzaStoreAdapter extends ArrayAdapter<PizzaStore> {
         View row = convertView;
 
         if (row == null) {
-            row==inf.inflate((R.layout.pizza_store_list_item, null));
+            inf.inflate(R.layout.pizza_store_list_item, null);
         }
         PizzaStore data = mList.get(position);
-        TextView
 
         return row;
     }
