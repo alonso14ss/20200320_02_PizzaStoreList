@@ -3,6 +3,7 @@
     package="co.kr.tjoeun.helloworld.a20200320_02_pizzastorelist">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".PizzaStoreDetailActivity"></activity>
+        <activity android:name=".LogoViewActivity"></activity>
+        <activity android:name=".PizzaStoreDetailActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
