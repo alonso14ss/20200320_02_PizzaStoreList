@@ -49,6 +49,7 @@ public class PizzaStoreAdapter extends ArrayAdapter<PizzaStore> {
 
         Glide.with(mContext).load(data.getLogoUrl()).into(logoImg);
 
+
         return row;
     }
 
