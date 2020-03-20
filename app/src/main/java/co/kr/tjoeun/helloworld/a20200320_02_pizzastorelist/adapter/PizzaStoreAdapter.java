@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -37,6 +38,10 @@ public class PizzaStoreAdapter extends ArrayAdapter<PizzaStore> {
         if (row == null) {
             row==inf.inflate((R.layout.pizza_store_list_item, null));
         }
+        PizzaStore data = mList.get(position);
+        TextView
+
         return row;
     }
+
 }
